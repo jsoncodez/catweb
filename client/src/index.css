@@ -1,0 +1,109 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.home .blog-list h2 {
+  color: #da859f;
+  font-size: calc(5px + 2vmin);
+  font-weight:lighter;
+}
+
+
+.home .blog-list .blog-list-title{
+  color: #de1450;
+  font-size: calc(10px + 2vmin);
+  font-weight:normal;
+  text-align:left;
+}
+
+.home .blog-list .blog-preview {
+  padding: 5px;
+  padding-left: 30px;
+  margin: 0px;
+
+  text-align: left;
+  font-size: calc(2px + 1vmin);
+  font-weight: lighter;
+  color: #f1356d;
+}
+
+
+.home .blog-list p {
+  color: whitesmoke;
+  font-size: calc(5px + 1vmin);
+  font-weight:lighter;
+}
+
+.navbar {
+  font-family: 'Roboto';
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+  
+  
+}
+
+
+
+.navbar h1 {
+  
+  font-weight: bold;
+  font-size: calc(10px + 2vmin);
+  color: #f1356d;
+
+  /* text-decoration: inherit; */
+
+}
+.navbar .links {
+  margin-left: auto;
+
+
+}
+
+
+.navbar a {
+
+  margin-left: 16px;
+  padding: 8px;
+
+  color:#f1356d;
+  
+  text-decoration: none;
+  /* text-decoration:none !important; */
+}
+
+
+.navbar a:hover {
+  /* color: #f1356d; */
+  color: white;
+  text-decoration:underline;
+  transition: 600ms;
+
+
+}
+
+
+
+.content {
+  /* max-width: 600px; */
+  margin: 40px auto;
+  padding: 20px;
+
+  /* text-decoration:none !important; */
+  
+
+}
