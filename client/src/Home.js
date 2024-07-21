@@ -31,17 +31,30 @@ const Home = () => {
 
     }
 
+
     useEffect(() => {
-        console.log('use effect ran');
-        // console.log(blogs);
+        
     }, [name]);
+
+
+    // useEffect(() => {
+    //     fetch('http://localhost:8000/blogs')
+    //         .then(res=> {
+    //             return res.json();
+
+    //         })
+    //         .then(data=> {
+    //             setBlogs(data);
+    //         });
+    // }, []);
+
 
     return ( 
         <div className="home">
             <h2>Home Page</h2>
 
-            <BlogList blogs={blogs} title ="My Blogs" handleDelete={handleDelete}/>
-            <BlogList blogs={blogs.filter((blog) => blog.author==="mario")} title="Mario's blogs" handleDelete={handleDelete}/>
+            {blogs && <BlogList blogs={blogs} title ="My Blogs" handleDelete={handleDelete}/>}
+            {blogs && <BlogList blogs={blogs.filter((blog) => blog.author==="mario")} title="Mario's blogs" handleDelete={handleDelete}/>}|
 
             <button onClick={()=>setName('luigi')}>change name</button>
             <p>{name}</p>

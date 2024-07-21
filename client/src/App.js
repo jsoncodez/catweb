@@ -10,8 +10,6 @@ import Home from './Home';
 import SPLoader from './SpinnerLoader';
 
 
-
-
 function App() {
   
   // const [loading, setLoading] = useState(false);
@@ -31,7 +29,7 @@ function App() {
     fetch("/api").then(
       response=>response.json()
     ).then(
-      data => {
+      data => { 
         setBackendData(data)
       }
     )
@@ -39,7 +37,6 @@ function App() {
 
 
   return (
-
 
     <div className="App">
         {/* <SPLoader /> */}
