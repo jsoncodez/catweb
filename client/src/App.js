@@ -1,13 +1,11 @@
 import './index.css';
-
-// import ReactDOM from 'react-dom/client';
 import React, { useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './index.css';
 import Navbar from './Navbar';
 import Home from './Home';
-import SPLoader from './SpinnerLoader';
+
 
 
 function App() {
@@ -23,17 +21,18 @@ function App() {
   
 
   //CALLS ON API TO GET DATABASE SERVER SIDE
-  const [backendData, setBackendData] = useState([{}])
+  // const [backendData, setBackendData] = useState([{}])
 
-  useEffect(() => {
-    fetch("/api").then(
-      response=>response.json()
-    ).then(
-      data => { 
-        setBackendData(data)
-      }
-    )
-  }, [])
+  // useEffect(() => {
+  //   fetch("/api").then(
+  //     response=>response.json()
+  //   ).then(
+  //     data => { 
+  //       // setBackendData(data)
+  //       console.log(data);
+  //     }
+  //   )
+  // }, [])
 
 
   return (
@@ -65,13 +64,13 @@ function App() {
               Learn React
             </a> */}
 
-            <div>
+            {/* <div>
               {(typeof backendData.users === 'undefined') ? ( <p>Loading...</p>): (
                 backendData.users.map((user, i) => (
                   <p key = {i}> {user} </p>
                 ))
               )}
-            </div>
+            </div> */}
           </div>
         </header>
       
