@@ -21,7 +21,6 @@ const items = [
     }
 ];
 
-
 app.get("/api/items", (req, res) => {
     res.send(items);
 

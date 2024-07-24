@@ -1,9 +1,7 @@
 // const BlogList = ({blogs, title, handleDelete}) => {
 // const BlogList = ({blogs, title}) => {
 const BlogList = ({items, title}) => {
-   
-
-  
+ 
     return (
 
         <div className = "blog-list">

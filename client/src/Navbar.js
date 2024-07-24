@@ -7,6 +7,7 @@ const Navbar = () => {
             <h1>WebCat</h1>
 
             <div className = "links">
+                {/* <Link to ="/">Home</Link> */}
                 <a href="/" >Home</a>
                 <a href="/create" >New Blog</a>
                 {/* <a href="/">Home</a> */}

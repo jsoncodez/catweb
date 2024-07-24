@@ -7,6 +7,7 @@ const Home = () => {
     //server stuff:
     const [items, setItems] = useState([]);
     const [isPending, setIsPending] = useState(true);
+    const [error, setError] = useState(null);
 
 /*------------*//*------------*/
     // let varOutput = 'output variable';
@@ -31,11 +32,12 @@ const Home = () => {
           .then(data => {
             setItems(data);
             setIsPending(false);
+            setError(null);
           })
           //if there is any network error. i.e. can't connect to server.
           .catch((err)=>{
-            setIsPending(false);
-            console.log(err.message);
+            setIsPending(false);            
+            setError(err.message);
           })
         
 
