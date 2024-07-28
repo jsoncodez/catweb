@@ -19,7 +19,8 @@ const Home = () => {
     //server useeffect:
     useEffect(() => {
       setTimeout(()=> {
-        fetch("/api/items")
+        // fetch("/api/items")
+        fetch("http://localhost:5000/api/items")
           .then((res) => 
             
             {if(!res.ok) {
