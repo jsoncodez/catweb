@@ -1,13 +1,16 @@
 import {useState, useEffect} from 'react';
 import  BlogList from './BlogList';
+import useFetch from './useFetch';
 
 const Home = () => {
 
   /*------------*//*------------*/
     //server stuff:
-    const [items, setItems] = useState([]);
-    const [isPending, setIsPending] = useState(true);
-    const [error, setError] = useState(null);
+    // const [items, setItems] = useState([]);
+    // const [isPending, setIsPending] = useState(true);
+    // const [error, setError] = useState(null);
+
+    const {data:items, isPending, Error} = useFetch('http://localhost:5000/api/items');
 
 /*------------*//*------------*/
     // let varOutput = 'output variable';
@@ -17,33 +20,33 @@ const Home = () => {
 
     /*------------*/
     //server useeffect:
-    useEffect(() => {
-      setTimeout(()=> {
-        // fetch("/api/items")
-        fetch("http://localhost:5000/api/items")
-          .then((res) => 
+    // useEffect(() => {
+    //   setTimeout(()=> {
+    //     // fetch("/api/items")
+    //     fetch("http://localhost:5000/api/items")
+    //       .then((res) => 
             
-            {if(!res.ok) {
-              throw Error('Could not fetch data...');
-            }
+    //         {if(!res.ok) {
+    //           throw Error('Could not fetch data...');
+    //         }
 
-            return res.json();
-          })
+    //         return res.json();
+    //       })
 
-          .then(data => {
-            setItems(data);
-            setIsPending(false);
-            setError(null);
-          })
-          //if there is any network error. i.e. can't connect to server.
-          .catch((err)=>{
-            setIsPending(false);            
-            setError(err.message);
-          })
+    //       .then(data => {
+    //         setItems(data);
+    //         setIsPending(false);
+    //         setError(null);
+    //       })
+    //       //if there is any network error. i.e. can't connect to server.
+    //       .catch((err)=>{
+    //         setIsPending(false);            
+    //         setError(err.message);
+    //       })
         
 
-      }, 1000);
-    },[]);
+    //   }, 1000);
+    // },[]);
 
     
     /*------------*/

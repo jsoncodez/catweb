@@ -1,16 +1,17 @@
 import { useEffect,useState } from "react";
+import  BlogList from './BlogList';
 
+const useFetch = (url) => {
 
-const useFetch = () => {
-
-    const [items, setItems] = useState([]);
+    // const [items, setItems] = useState([]);
+    const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         setTimeout(()=> {
           // fetch("/api/items")
-          fetch("http://localhost:5000/api/items")
+          fetch(url)
             .then((res) => 
               
               {if(!res.ok) {
@@ -21,7 +22,8 @@ const useFetch = () => {
             })
   
             .then(data => {
-              setItems(data);
+              // setItems(data);
+              setData(data);
               setIsPending(false);
               setError(null);
             })
@@ -35,7 +37,9 @@ const useFetch = () => {
         }, 1000);
       },[]);
 
-    //   return {items, isPending, error};
+
+
+    return {data, isPending, error};
 }
 
 export default useFetch;
