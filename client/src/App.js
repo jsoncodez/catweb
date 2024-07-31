@@ -4,12 +4,12 @@ import logo from './logo.svg';
 import './App.css';
 import './index.css';
 import Navbar from './Navbar';
-// import AppRoutes from './Routes';
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Home from './Home';
-import About from './About';
+import About from './About';  
+import Create from './Create';
 
 function App() {
   
@@ -21,7 +21,6 @@ function App() {
   //     setLoading(false);
   //   }, 2000) 
   // }, [])
-  
 
   //CALLS ON API TO GET DATABASE SERVER SIDE
   // const [backendData, setBackendData] = useState([{}])
@@ -36,7 +35,6 @@ function App() {
   //     }
   //   )
   // }, [])
-
 
   return (
 
@@ -61,7 +59,6 @@ function App() {
                 {/* <Route path="./" element={<Home />} /> */}
 
 
-
                 <img src={logo} className="App-logo" alt="logo" />
 
                 {/* <Home /> */}
@@ -71,13 +68,12 @@ function App() {
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />}/>
-                    
-                    
+                    <Route path="/create" element={<Create />}/>
+
                   </Routes>
                 
                 </Router>
-          
-                
+
                 <p>
                   
 

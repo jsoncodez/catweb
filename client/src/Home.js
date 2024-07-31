@@ -18,6 +18,7 @@ const Home = () => {
     const [var2, setVar2] = useState(2);
     const [name, setName] = useState('mario');
 
+    
     /*------------*/
     //server useeffect:
     // useEffect(() => {
@@ -60,6 +61,7 @@ const Home = () => {
         </div>
       })
     }
+
     const handleClick = () => {
         console.log("HELLO WORLD");
     }

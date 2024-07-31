@@ -26,5 +26,10 @@ app.get("/api/items", (req, res) => {
 
 });
 
+app.post("/api/items", (req, res) => {
+    items.push(req.body);
+    console.log(items);
+    
+});
 
 app.listen(5000, () => {console.log("Server started on port 5000")})
