@@ -4,8 +4,12 @@ import logo from './logo.svg';
 import './App.css';
 import './index.css';
 import Navbar from './Navbar';
+// import AppRoutes from './Routes';
+
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
 import Home from './Home';
-// import { BrowserRouter as Router, Routes} from 'react-router-dom';
+import About from './About';
 
 function App() {
   
@@ -36,8 +40,9 @@ function App() {
 
   return (
 
-      
       <div className="App">
+    
+
           {/* <SPLoader /> */}
 
 
@@ -45,39 +50,63 @@ function App() {
             <img src="./loadspin.gif"/>
           </div> */}
 
+
           <header className="App-header">
-            <Navbar />
-            <div className = "content">
-              <img src={logo} className="App-logo" alt="logo" />
 
-            
-              <Home />
-        
+              <Navbar />
+
+              <div className = "content">
               
-              <p>
+                {/* <Route path="./Home" element={<Home />} /> */}
+                {/* <Route path="./" element={<Home />} /> */}
+
+
+
+                <img src={logo} className="App-logo" alt="logo" />
+
+                {/* <Home /> */}
+                {/* <About /> */}
+
+                <Router basename ="/">
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />}/>
+                    
+                    
+                  </Routes>
                 
+                </Router>
+          
+                
+                <p>
+                  
 
-              </p>
-              {/* <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn React
-              </a> */}
+                </p>
+                {/* <a
+                  className="App-link"
+                  href="https://reactjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Learn React
+                </a> */}
 
-              {/* <div>
-                {(typeof backendData.users === 'undefined') ? ( <p>Loading...</p>): (
-                  backendData.users.map((user, i) => (
-                    <p key = {i}> {user} </p>
-                  ))
-                )}
-              </div> */}
-            </div>
+                {/* <div>
+                  {(typeof backendData.users === 'undefined') ? ( <p>Loading...</p>): (
+                    backendData.users.map((user, i) => (
+                      <p key = {i}> {user} </p>
+                    ))
+                  )}
+                </div> */}
+                
+              </div>
+              
+             
           </header>
+
         
       </div>
+     
 
   );
 }

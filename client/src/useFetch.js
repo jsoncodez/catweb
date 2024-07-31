@@ -10,7 +10,6 @@ const useFetch = (url) => {
 
     useEffect(() => {
         setTimeout(()=> {
-          // fetch("/api/items")
           fetch(url)
             .then((res) => 
               
@@ -21,8 +20,7 @@ const useFetch = (url) => {
               return res.json();
             })
   
-            .then(data => {
-              // setItems(data);
+            .then(data => {              
               setData(data);
               setIsPending(false);
               setError(null);
